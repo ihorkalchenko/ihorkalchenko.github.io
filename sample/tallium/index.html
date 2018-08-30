@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-user mobile">
+                <a href="#" class="logo"><img src="images/user-ico.png" alt=""></a>
+                <a href="#" class="toggle">Me <span class="glyphicon glyphicon-menu-down"></span></a>
+            </div>
+            <div class="navbar-notifications mobile">
+                <a href="#"><img src="images/notification-ico.png" alt=""></a>
+            </div>
+            <a href="#" class="navbar-brand"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="navbar-user desktop">
+                <a href="#" class="logo"><img src="images/user-ico.png" alt=""></a>
+                <a href="#" class="toggle">Me <span class="glyphicon glyphicon-menu-down"></span></a>
+            </div>
+            <div class="navbar-notifications desktop">
+                <a href="#"><img src="images/notification-ico.png" alt=""></a>
+            </div>
+            <ul class="nav navbar-nav navbar-menu">
+                <li><a href="#">My contest <span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">One-on-one <span class="glyphicon glyphicon-menu-down"></span></a></li>
+                <li><a href="#">Help <span class="glyphicon glyphicon-menu-down"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="control-panel container">
+    <div class="row">
+        <div class="col-sm-16 col-xs-12">
+            <div class="checkbox-group">
+                <div class="checkbox checkbox-inline">
+                    <input id="checkbox1" type="checkbox" checked="">
+                    <label for="checkbox1">checked</label>
+                </div>
+                <div class="checkbox checkbox-inline">
+                    <input id="checkbox2" type="checkbox">
+                    <label for="checkbox2">unchecked</label>
+                </div>
+                <div class="checkbox checkbox-inline">
+                    <input id="checkbox3" type="checkbox">
+                    <label for="checkbox3">on hover</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-xs-12">
+            <div class="sortby">
+                <div class="btn-group">
+                    <label><a href="#" class="glyphicon glyphicon-arrow-down"></a> Sort by:</label>
+                    <button type="button" class="btn btn-default dropdown-label">rating</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">rating</a></li>
+                        <li><a href="#">price</a></li>
+                        <li><a href="#">comment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-6 col-sm-8">
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/card-1.jpg" alt="">
+                </div>
+                <div class="card-panel">
+                    <div class="card-header">
+                        <div class="card-hashtag">#796</div>
+                        <div class="card-author">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-star-empty"></span> VladTodirut
+                            </a>
+                        </div>
+                        <div class="card-tools">
+                            <ul>
+                                <li><a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-comment"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-like">
+                            <span>96 <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a></span>
+                        </div>
+                        <div class="card-range">
+                            <div class="card-range-inner">
+                                <input id="rangeSlider"
+                                       data-slider-id='ex1Slider'
+                                       type="text"
+                                       data-slider-tooltip="hide"
+                                       data-slider-min="0"
+                                       data-slider-max="100"
+                                       data-slider-step="20"
+                                       data-slider-value="0"/>
+                            </div>
+                            <div class="card-range-value" id="rangeVal">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-8">
+            <div class="card active">
+                <div class="card-img">
+                    <img src="images/card-2.jpg" alt="">
+                </div>
+                <div class="card-panel">
+                    <div class="card-header">
+                        <div class="card-hashtag">#796</div>
+                        <div class="card-author">
+                            <a href="#">
+                                 VladTodirut
+                            </a>
+                        </div>
+                        <div class="card-tools">
+                            <ul>
+                                <li class="active"><a href="#"><span class="glyphicon glyphicon-comment"></span></a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                <li class="warning"><a href="#"><span class="glyphicon glyphicon-warning-sign"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-form">
+                        <form>
+                            <textarea class="form-control" rows="4"></textarea>
+                            <button type="button" class="btn">Post comment</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-like">
+                            <span>96 <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span></a></span>
+                        </div>
+                        <div class="card-range">
+                            <div class="card-range-inner">
+                                <input id="rangeSlider1"
+                                       data-slider-id='ex1Slider'
+                                       type="text"
+                                       data-slider-tooltip="hide"
+                                       data-slider-min="0"
+                                       data-slider-max="100"
+                                       data-slider-step="20"
+                                       data-slider-value="0"/>
+                            </div>
+                            <div class="card-range-value" id="rangeVal1">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                <div class="footer-social">
+                    <ul>
+                        <li><a href="#"><img src="images/facebook-ico.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/pinterest-ico.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/twitter-ico.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/google-ico.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/rss-ico.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="footer-logo">
+                    <a href="#"><img src="images/logo-footer.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-sm-11 col-md-8">
+                <div class="footer-help">
+                    <ul>
+                        <li><a href="#">Live chat</a></li>
+                        <li><a href="#">E-mail</a></li>
+                        <li><a href="#">1888-966-1888</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="footer-menu one">
+                            <ul>
+                                <li><a href="#">blog</a></li>
+                                <li><a href="#">forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-16">
+                        <div class="footer-menu two">
+                            <ul>
+                                <li><a href="#">privacy</a></li>
+                                <li><a href="#">terms of services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-offset-4 col-md-4">
+                <div class="footer-menu three">
+                    <ul>
+                        <li><a href="#">browse contests</a></li>
+                        <li><a href="#">testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu four">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright">
+                    <span>© 2013 DesignContest.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script>
+    $('#rangeSlider').slider({
+        ticks: [0, 20, 40, 60, 80, 100]
+    });
+    $('#rangeSlider').on('slide', function (slideValue) {
+        $('#rangeVal').text(slideValue.value);
+    });
+    $('#rangeSlider1').slider({
+        ticks: [0, 20, 40, 60, 80, 100]
+    });
+    $('#rangeSlider1').on('slide', function (slideValue) {
+        $('#rangeVal1').text(slideValue.value);
+    });
+
+</script>
+</body>
+</html>
