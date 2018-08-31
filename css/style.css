@@ -116,10 +116,10 @@ body {
 }
 
 .social .icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 40px;
+    height: 40px;
     background-color: #222;
-    line-height: 2.5rem;
+    line-height: 40px;
     text-align: center;
     vertical-align: middle;
     display: inline-block;
@@ -134,21 +134,21 @@ body {
 
 .social .icon .fa {
     font-size: 1.25rem;
-    line-height: 2.5rem;
+    line-height: 40px;
     color: #fff;
 }
 
 .social .icon:hover {
     transition: background-color 150ms ease-in-out;
-    width: 2.25rem;
-    height: 2.25rem;
-    line-height: 2.25rem;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     background-color: #fff;
     border: 2px solid #222;
 }
 
 .social .icon:hover .fa {
-    line-height: 2.25rem;
+    line-height: 36px;
     color: #222;
     transition: color 150ms ease-in-out;
 }
