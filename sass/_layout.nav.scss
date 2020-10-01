@@ -1,0 +1,26 @@
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to('medium') {
+        flex-direction: column;
+    }
+}
+
+.nav-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include respond-to('medium') {
+        padding: .75rem 0;
+    }
+}
+
+.nav-link {
+    color: $color-grey-800;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    letter-spacing: .1rem;
+}

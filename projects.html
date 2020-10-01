@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ihor kalchenko | home</title>
+    <title>ihor kalchenko | projects</title>
     <meta name="decription" content="I'm a front-end developer who's focused to bring aesthetics to users.">
     <meta name="author" content="Ihor Kalchenko">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700">
@@ -35,19 +35,49 @@
         <main class="main">
             <section class="section">
                 <header class="section-header">
-                    <h1 class="section-title">Home</h1>
-                    <p class="section-subtitle">A few words about me</p>
+                    <h1 class="section-title">My recent work</h1>
+                    <p class="section-subtitle">Here are a few projects I've worked on recently</p>
                 </header>
                 <section class="section-content">
-                    <img class="section-pic" src="./img/pic.jpg" alt="">
-                    <p>&nbsp;</p>
-                    <p>Hi! My name is Ihor. I'm a front-end developer with 3+ years expirience building and maintaining
-                        responsive websites and
-                        applications in the different areas. Proficient in HTML, CSS, JavaScript plus modern libraries and
-                        frameworks.
-                        Passionate about usability, cross-browser compatibility and possess working knowelege using different
-                        graphic editors
-                        such like Adobe Photoshop, Figma, Avocode.</p>
+                    <section class="work">
+                        <div class="work-list">
+                            <div class="work-item">
+                                <img class="work-pic" src="./img/thumb/eshop.jpg" alt="">
+                                <div class="work-caption">
+                                    <h3 class="work-title">Eshop details page</h3>
+                                    <p class="work-mark">Vue / Sass / Gulp</p>
+                                    <a class="work-link" href="/projects/eshop" target="_blank">View project</a>
+                                </div>
+                            </div>
+
+                            <div class="work-item">
+                                <img class="work-pic" src="./img/thumb/candb.jpg" alt="">
+                                <div class="work-caption">
+                                    <h3 class="work-title">C&B market template</h3>
+                                    <p class="work-mark">jQuery / Sass / Gulp</p>
+                                    <a class="work-link" href="/projects/candb" target="_blank">View project</a>
+                                </div>
+                            </div>
+
+                            <div class="work-item">
+                                <img class="work-pic" src="./img/thumb/shipping.jpg" alt="">
+                                <div class="work-caption">
+                                    <h3 class="work-title">Shipping form</h3>
+                                    <p class="work-mark">jQuery / Sass / Gulp</p>
+                                    <a class="work-link" href="/projects/shipping-form" target="_blank">View project</a>
+                                </div>
+                            </div>
+
+                            <div class="work-item">
+                                <img class="work-pic" src="./img/thumb/tile.jpg" alt="">
+                                <div class="work-caption">
+                                    <h3 class="work-title">Ceramic interior company</h3>
+                                    <p class="work-mark">JS / Sass / Gulp</p>
+                                    <a class="work-link" href="http://tilestyle.com.ua/" target="_blank">View project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </section>
         </main>
@@ -60,7 +90,7 @@
                         class="fab fa-linkedin-in"></i></a>
             </div>
             <small class="footer-copyright">&copy; <span class="js-year"></span>, ihor kalchenko</small>
-
+            
             <script>
                 document.querySelector('.js-year').textContent = new Date().getFullYear();
             </script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eshop | Goods details page</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <app-header :logo="logo">
+            <app-cart :cart="cart"></app-cart>
+        </app-header>
+
+        <main>
+            <div class="container">
+                <app-breadcrumb></app-breadcrumb>
+                <app-product @add-to-cart="updateCart"></app-product>
+                <!-- <app-review></app-review> create component and set its functional -->
+            </div>
+        </main>
+
+        <app-footer></app-footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@function pow($number, $exponent) {
+    $value: 1;
+
+    @if $exponent > 0 {
+        @for $i from 1 through $exponent {
+            $value: $value * $number;
+        }
+    }
+
+    @return $value;
+}
+
+@function font-size($size) {
+    $sizes: (
+        xs: $font-base / pow($space-ratio, 2),
+        sm: $font-base / pow($space-ratio, 1),
+        md: $font-base,
+        lg: $font-base / pow($space-ratio, 1),
+        xl: $font-base / pow($space-ratio, 2),
+        xx: $font-base / pow($space-ratio, 3),
+    );
+
+    @if (map-has-key($sizes, $size)) {
+        @return map-get($sizes, $size);
+    } @else {
+        @warn "$size doesn't exist is $sizes.";
+    }
+}
+
+@function heading-size($size) {
+    $sizes: (
+        sm: $font-base * pow($space-ratio, 1),
+        md: $font-base * pow($space-ratio, 2),
+        lg: $font-base * pow($space-ratio, 3),
+        xl: $font-base * pow($space-ratio, 4),
+    );
+
+    @if (map-has-key($sizes, $size)) {
+        @return map-get($sizes, $size);
+    } @else {
+        @warn "$size doesn't exist in $sizes.";
+    }
+}
+
+@function line-height($size) {
+    $sizes: (
+        sm: $line-height-base,
+        md: $line-height-base * pow($space-ratio, 1)
+    );
+
+    @if (map-has-key($sizes, $size)) {
+        @return map-get($sizes, $size);
+    } @else {
+        @warn "$size doesn't exist in $sizes.";
+    }
+}
+

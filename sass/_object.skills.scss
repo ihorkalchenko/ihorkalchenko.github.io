@@ -1,0 +1,35 @@
+.skills {
+    margin: 3rem 0;
+}
+
+.skills-title {
+    font-family: $font-secondary;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    @include respond-to('small') {
+       display: grid;
+       grid-gap: 0 1rem;
+       grid-template-areas: "col1 col2";
+       grid-auto-flow: column;
+    }
+}
+
+.skill {
+    margin-top: 1rem;
+
+    @include respond-to('small') {
+        &:nth-child(-n+5) {
+            grid-area: col1;
+            grid-row: auto;
+        }
+
+        &:nth-child(n+6) {
+            grid-area: col2;
+            grid-row: auto;
+        }
+    }
+}

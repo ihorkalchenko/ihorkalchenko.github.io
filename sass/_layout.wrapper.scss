@@ -1,0 +1,14 @@
+.wrapper {
+
+    @include respond-to('medium') {
+        height: 100%;
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: 321px 1fr;
+        grid-template-areas: 
+            "header main"
+            "header main"
+            "header main"
+            "footer main";
+    }
+}
