@@ -52,13 +52,12 @@
                 <section class="section-content">
                     <img loading="lazy" width="970" height="620" class="section-pic" src="./img/pic.jpg" alt="">
                     <p>&nbsp;</p>
-                    <p>Hi! My name is Ihor. I'm a front-end developer with 3+ years expirience building and maintaining
-                        responsive websites and
-                        applications in the different areas. Proficient in HTML, CSS, JavaScript plus modern libraries and
-                        frameworks.
-                        Passionate about usability, cross-browser compatibility and possess working knowelege using different
-                        graphic editors
-                        such like Adobe Photoshop, Figma, Avocode.</p>
+                    <p>
+                        Hi! <br/>
+                        My name is Ihor. I'm a keen focused software developer with <span class="js-experience"></span> years
+                        of frontend experience and passion for building single page applications (SPA), responsive design
+                        and a firm believer in mobile-first approach.
+                    </p>
                 </section>
             </section>
         </main>
@@ -74,6 +73,7 @@
 
             <script>
                 document.querySelector('.js-year').textContent = new Date().getFullYear();
+                document.querySelector('.js-experience').textContent = new Date().getFullYear() - 2017 + '+';
             </script>
         </footer>
     </div>
