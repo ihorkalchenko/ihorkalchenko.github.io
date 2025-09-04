@@ -110,12 +110,14 @@
                         class="fab fa-linkedin-in"></i></a>
             </div>
             <small class="footer-copyright">&copy; <span class="js-year"></span>, ihor kalchenko</small>
-            
-            <script>
-                document.querySelector('.js-year').textContent = new Date().getFullYear();
-            </script>
         </footer>
     </div>
 
+    <script>
+        const startYear = 2017;
+        const currentYear = new Date().getFullYear();
+
+        document.querySelector('.js-year').textContent = `${startYear}-${currentYear}`;
+    </script>
 </body>
 </html>
