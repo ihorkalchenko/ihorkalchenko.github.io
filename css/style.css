@@ -96,6 +96,10 @@ body {
   display: inline-block;
   outline: none;
   letter-spacing: .1rem;
+
+  &.active {
+    text-decoration: underline;
+  }
 }
 
 @media (min-width: 1200px) {
