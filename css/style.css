@@ -365,6 +365,8 @@ body {
 
 .actions-download {
   display: inline-flex;
+  align-items: center;
+  gap: 1rem;
   border: 1px solid;
   font-size: 80%;
   padding: 4px 8px;
