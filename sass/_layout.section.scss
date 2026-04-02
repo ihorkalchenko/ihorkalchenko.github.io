@@ -1,6 +1,7 @@
 .section {
     padding: 2rem;
     max-width: 880px;
+    margin: auto;
 
     @include respond-to('medium') {
         padding-left: 4rem;
