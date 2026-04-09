@@ -1,26 +1,28 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 // config
-@import './config.variables';
-@import './config.function';
-@import './config.mixin';
+@import 'config/variables';
+@import 'config/function';
+@import 'config/mixin';
 
 // vendor
-@import './vendor.reset';
+@import 'vendor/reset';
 
 // base
-@import './base.root';
+@import 'base/root';
 
 // layouts
-@import './layout.nav';
-@import './layout.main';
-@import './layout.header';
-@import './layout.section';
-@import './layout.footer';
-@import './layout.wrapper';
+@import 'layout/nav';
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/section';
+@import 'layout/footer';
+@import 'layout/wrapper';
 
-// objects
-@import './object.jobs';
-@import './object.skills';
-@import './object.educations';
-@import './object.work';
+// sections
+@import 'section/jobs';
+@import 'section/skills';
+@import 'section/achievments';
+@import 'section/educations';
+@import 'section/work';
+@import 'section/actions';

@@ -1,0 +1,29 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+
+  @include respond-to('medium') {
+    justify-content: flex-end;
+  }
+}
+
+.actions-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid;
+  font-size: 80%;
+  padding: 4px 8px;
+  color: inherit;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: white;
+    background: #313131;
+  }
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
