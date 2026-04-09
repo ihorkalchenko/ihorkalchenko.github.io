@@ -1,0 +1,14 @@
+{
+  "name": "ihorkalchenko.github.io",
+  "version": "1.0.0",
+  "description": "The personal portfolio website",
+  "scripts": {
+    "sass:watch": "npx sass --watch sass/style.scss:css/style.css"
+  },
+  "author": "ihorkalchenko",
+  "license": "MIT",
+  "homepage": "https://github.com/ihorkalchenko/ihorkalchenko.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
