@@ -162,7 +162,7 @@ body.dark-theme {
 }
 .switch-knob::before, .switch-knob::after {
   font-family: "Font Awesome 5 Free";
-  font-size: 16px;
+  font-size: 17px;
   padding: 4px;
   min-height: 16px;
   color: var(--switch-color);
