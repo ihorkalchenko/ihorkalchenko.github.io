@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ihor kalchenko | home</title>
-    <meta name="decription" content="I'm a front-end developer who's focused to bring aesthetics to users.">
+    <meta name="description" content="I'm a front-end developer who's focused to bring aesthetics to users.">
     <meta name="author" content="Ihor Kalchenko">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -41,6 +41,15 @@
                     <li class="nav-item"><a class="nav-link" href="/about">resume</a></li>
                 </ul>
             </nav>
+
+            <div class="switch-wrapper">
+                <div class="switch-button">
+                    <input type="checkbox" class="switch-checkbox" />
+                    <div class="switch-knob">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </header>
         
         <main class="main">
@@ -89,6 +98,20 @@
     </div>
 
     <script>
+        // switcher
+        const body = document.body;
+        const switcher = document.querySelector('.switch-checkbox');
+        const isDark = localStorage.getItem('theme') === 'dark';
+
+        body.classList.toggle('dark-theme', isDark);
+        switcher && (switcher.checked = isDark);
+
+        switcher?.addEventListener('change', () => {
+            const enabled = body.classList.toggle('dark-theme');
+            localStorage[enabled ? 'setItem' : 'removeItem']('theme', 'dark');
+        });
+
+        // copyright
         const startYear = 2019;
         const currentYear = new Date().getFullYear();
 

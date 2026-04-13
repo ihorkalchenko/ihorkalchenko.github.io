@@ -1,14 +1,15 @@
 .footer {
     padding: 5rem 0;
+    transition: ease 0.3s all;
 
     @include respond-to('medium') {
         grid-area: footer;
         width: 320px;
-        background-color: $color-grey-100;
+        background-color: var(--header-background-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        border-right: 1px solid $color-grey-200;
+        border-right: 1px solid var(--header-border-color);
     }
 }
 
