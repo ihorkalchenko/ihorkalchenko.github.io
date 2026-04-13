@@ -14,7 +14,7 @@ I am a Software Developer with 6+ years of experience specializing in **Angular*
 
 - **Frontend**: Angular (TypeScript, RxJS, NgRx), JavaScript (ES6+).
 - **UI & Styling**: HTML5, CSS3, Sass, Bootstrap, Angular Material, Ionic Framework.
-- **Tools & Build**: Webpack, Docker, Gulp, npm, yarn.
+- **Tools & Build**: Webpack, Docker, Gulp, yarn.
 - **Testing**: Jasmine, Karma.
 - **Others**: Git, Jira, Figma, WordPress.
 
