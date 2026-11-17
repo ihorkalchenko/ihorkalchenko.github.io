@@ -5,5 +5,14 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://ihorkalchenko.github.io',
   integrations: [react()],
-  output: 'static'
+  output: 'static',
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ['legacy-js-api', 'import', 'slash-div', 'global-builtin']
+        }
+      }
+    }
+  }
 });
