@@ -1,0 +1,143 @@
+media:
+  - name: images
+    label: Images
+    input: public/img
+    output: /img
+    extensions: [png, jpg, jpeg, svg, webp]
+  - name: documents
+    label: Documents
+    input: public/files
+    output: /files
+    extensions: [pdf, doc, docx]
+
+content:
+  - name: home
+    label: Home Page
+    type: file
+    path: src/content/pages/home.json
+    fields:
+      - name: title
+        label: Page Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Subtitle
+        type: string
+        required: true
+      - name: photo
+        label: Profile Photo
+        type: image
+      - name: startYear
+        label: Career Start Year (for experience calculation)
+        type: number
+        default: 2019
+        required: true
+      - name: intro
+        label: Introduction Paragraphs
+        type: rich-text
+
+  - name: resume
+    label: Resume / About
+    type: file
+    path: src/content/pages/resume.json
+    fields:
+      - name: title
+        label: Page Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: cvFile
+        label: CV PDF Link
+        type: file
+      - name: skills
+        label: Strengths / Skills
+        type: object
+        list: true
+        fields:
+          - name: category
+            label: Category
+            type: string
+            required: true
+          - name: items
+            label: Technologies / Skills
+            type: string
+            required: true
+      - name: experience
+        label: Work Experience
+        type: object
+        list: true
+        fields:
+          - name: company
+            label: Company Name
+            type: string
+            required: true
+          - name: period
+            label: Employment Period
+            type: string
+            required: true
+          - name: role
+            label: Role / Position
+            type: string
+            required: true
+          - name: stack
+            label: Tech Stack
+            type: string
+          - name: responsibilities
+            label: Responsibilities
+            type: string
+            list: true
+      - name: education
+        label: Education
+        type: object
+        list: true
+        fields:
+          - name: institution
+            label: Institution
+            type: string
+            required: true
+          - name: degree
+            label: Degree / Field
+            type: string
+            required: true
+          - name: period
+            label: Period
+            type: string
+      - name: achievements
+        label: Achievements
+        type: string
+        list: true
+
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    format: yaml-frontmatter
+    filename: "{slug}.md"
+    fields:
+      - name: title
+        label: Project Title
+        type: string
+        required: true
+      - name: order
+        label: Display Order
+        type: number
+        default: 0
+      - name: thumbnail
+        label: Thumbnail Image
+        type: image
+      - name: alt
+        label: Thumbnail Alt Text
+        type: string
+      - name: stack
+        label: Tech Stack (e.g. Angular / Typescript / NgRx)
+        type: string
+        required: true
+      - name: link
+        label: Project Link (Live URL or /projects/...)
+        type: string
+        required: true
+      - name: body
+        label: Description / Case Study (Optional)
+        type: rich-text

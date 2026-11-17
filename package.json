@@ -1,14 +1,28 @@
 {
   "name": "ihorkalchenko.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The personal portfolio website",
+  "type": "module",
   "scripts": {
-    "sass:watch": "npx sass --watch sass/style.scss:css/style.css"
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "astro": "ASTRO_TELEMETRY_DISABLED=1 astro"
   },
   "author": "ihorkalchenko",
   "license": "MIT",
   "homepage": "https://github.com/ihorkalchenko/ihorkalchenko.github.io#readme",
+  "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "astro": "^5.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
-    "sass": "^1.99.0"
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "sass": "^1.85.1",
+    "typescript": "^5.7.3"
   }
 }

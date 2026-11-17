@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import resumeData from '../content/pages/resume.json';
+---
+
+<BaseLayout title={resumeData.title} description={resumeData.subtitle} activeNav="resume">
+  <section class="section">
+    <header class="section-header">
+      <h1 class="section-title">Resume</h1>
+      <p class="section-subtitle">{resumeData.subtitle}</p>
+    </header>
+    <section class="section-content">
+      <section class="actions">
+        <a
+          class="actions-download"
+          href={resumeData.cvFile}
+          target="_blank"
+          download
+        >
+          <i class="fas fa-download"></i>
+          Download as PDF
+        </a>
+      </section>
+
+      {resumeData.skills && (
+        <section class="skills">
+          <h2 class="skills-title">Strengths</h2>
+          <ul class="skills-list">
+            {resumeData.skills.map((skill) => (
+              <li class="skill">
+                <h3 class="skill-title">{skill.category}:</h3>
+                <p class="skill-subtitle">{skill.items}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {resumeData.experience && (
+        <section class="jobs">
+          <h2 class="jobs-title">Experience</h2>
+          <ul class="jobs-list">
+            {resumeData.experience.map((job) => (
+              <li class="jobs-item">
+                <div class="job">
+                  <h3 class="job-position">{job.role}, <span>{job.period}</span></h3>
+                  <p class="job-name">
+                    {job.companyUrl ? (
+                      <a href={job.companyUrl} target="_blank" rel="noopener noreferrer">{job.company}</a>
+                    ) : (
+                      job.company
+                    )}{job.location && `, ${job.location}`}
+                  </p>
+                  <div class="job-response">
+                    <h4 class="job-response-title">Responsibilities:</h4>
+                    <ul class="job-response-list">
+                      {job.responsibilities.map((resp) => (
+                        <li>{resp}</li>
+                      ))}
+                    </ul>
+                    {job.stack && (
+                      <p class="job-stack">
+                        <strong>Tech Stack</strong>: {job.stack}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {resumeData.achievements && (
+        <section class="achievements">
+          <h2 class="achievements-title">Key Achievements</h2>
+          <ul class="achievements-list">
+            {resumeData.achievements.map((ach) => (
+              <li>{ach}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {resumeData.education && (
+        <section class="educations">
+          <h2 class="educations-title">Education</h2>
+          {resumeData.education.map((edu) => (
+            <div class="education">
+              <h3 class="education-title">{edu.title}</h3>
+              <p class="education-location">{edu.institution}</p>
+              <p class="education-duration">{edu.period}</p>
+            </div>
+          ))}
+        </section>
+      )}
+    </section>
+  </section>
+</BaseLayout>

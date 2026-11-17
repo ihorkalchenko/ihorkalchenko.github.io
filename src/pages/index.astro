@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ExperienceYears } from '../components/ExperienceYears';
+import homeData from '../content/pages/home.json';
+---
+
+<BaseLayout title={homeData.title} description={homeData.subtitle} activeNav="home">
+  <section class="section">
+    <header class="section-header">
+      <h1 class="section-title">Home</h1>
+      <p class="section-subtitle">{homeData.subtitle}</p>
+    </header>
+    <section class="section-content">
+      <img
+        loading="lazy"
+        width="970"
+        height="620"
+        class="section-pic"
+        src={homeData.photo}
+        alt="Ihor Kalchenko"
+      />
+      <p>&nbsp;</p>
+      <p>{homeData.greeting}</p><br/>
+      <p>
+        I'm a Software Developer with <ExperienceYears client:load startYear={homeData.startYear} /> years of experience specializing in Angular and Ionic,
+        delivering scalable, high-performance web and mobile applications.
+      </p><br/>
+      {homeData.paragraphs && homeData.paragraphs.slice(1).map((para) => (
+        <>
+          <p>{para}</p><br/>
+        </>
+      ))}
+      {homeData.highlights && homeData.highlights.length > 0 && (
+        <p>
+          Over the years, I have:<br/><br/>
+          {homeData.highlights.map((highlight) => (
+            <>
+              ✔ {highlight}<br/>
+            </>
+          ))}
+        </p>
+      )}
+      <br/><br/><br/>
+    </section>
+  </section>
+</BaseLayout>

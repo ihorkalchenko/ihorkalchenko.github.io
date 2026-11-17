@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const sortedProjects = allProjects.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+---
+
+<BaseLayout title="ihor kalchenko | projects" description="Here are a few projects I've worked on recently" activeNav="projects">
+  <section class="section">
+    <header class="section-header">
+      <h1 class="section-title">My recent work</h1>
+      <p class="section-subtitle">Here are a few projects I've worked on recently</p>
+    </header>
+    <section class="section-content">
+      <section class="work">
+        <ul class="work-list">
+          {sortedProjects.map((project) => (
+            <li class="work-item">
+              <img class="work-pic" src={project.data.thumbnail} alt={project.data.alt || project.data.title} />
+              <div class="work-caption">
+                <h3 class="work-title">{project.data.title}</h3>
+                <p class="work-mark">{project.data.stack}</p>
+                <a class="work-link" href={project.data.link} target="_blank" rel="noopener noreferrer">View project</a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </section>
+  </section>
+</BaseLayout>

@@ -1,0 +1,85 @@
+{
+  "title": "ihor kalchenko | about",
+  "subtitle": "Here are some info about strengths and other things",
+  "cvFile": "/files/ihor-kalchenko-cv-angular-software-dev.pdf",
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": "Angular, TypeScript, RxJS, NgRx, JavaScript (ES6+)"
+    },
+    {
+      "category": "UI & Styling",
+      "items": "HTML5, CSS3, Sass, Bootstrap, Angular Material, Ionic Framework"
+    },
+    {
+      "category": "Tools & Build",
+      "items": "Webpack, Docker, Gulp, npm, yarn"
+    },
+    {
+      "category": "Testing",
+      "items": "Jasmine, Karma"
+    },
+    {
+      "category": "Other",
+      "items": "Git/GitHub, Jira, Agile/Scrum, Figma, WordPress, WebStorm/AI Assistance"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Protonix",
+      "companyUrl": "https://www.protonixltd.com",
+      "location": "Kyiv",
+      "period": "2021 - present",
+      "role": "Software Developer",
+      "responsibilities": [
+        "Developed core trading platform features including copy trading, market calendar, market analysis, and real-time chat integrations",
+        "Improved user engagement and usability by implementing intuitive, client-focused UI solutions",
+        "Upgraded Angular and dependencies across multiple projects, reducing technical debt and improving application stability",
+        "Collaborated closely with clients and cross-functional teams to define requirements and deliver scalable frontend solutions",
+        "Contributed to full-stack development with strong focus on frontend architecture and performance"
+      ],
+      "stack": "Angular (TS/RxJs/NgRx), Angular Material, Ionic, Chart.js, Jasmine, Jest, Webpack, Docker, Git"
+    },
+    {
+      "company": "Innovecs",
+      "companyUrl": "https://innovecs.com",
+      "location": "Kyiv",
+      "period": "2019 - 2021",
+      "role": "Software Developer",
+      "responsibilities": [
+        "Rebuilt and enhanced a deposit widget, improving functionality and maintainability",
+        "Developed client websites with optimized performance, reducing load times and improving conversion rates",
+        "Worked in cross-functional teams to deliver projects on time and within budget",
+        "Applied best practices in accessibility, responsiveness, and modern UI/UX design"
+      ],
+      "stack": "Angular, Angular Material, HTML, Sass, Bootstrap, PHP, MySQL, Webpack, Docker, Git"
+    },
+    {
+      "company": "Elyland LLC",
+      "companyUrl": "https://elyland.net/",
+      "location": "Kyiv",
+      "period": "2017 - 2018",
+      "role": "Web / UI Developer",
+      "responsibilities": [
+        "Developed and maintained promotional websites for gaming products",
+        "Built UI components for a social application",
+        "Improved website performance (PageSpeed score from ~50 to 86%)",
+        "Delivered responsive and visually engaging user interfaces"
+      ],
+      "stack": "HTML, Sass, JavaScript, Bootstrap, JSP, Gulp, Git, Photoshop"
+    }
+  ],
+  "achievements": [
+    "Improved website performance and load speed significantly across multiple projects",
+    "Delivered high-impact fintech features used by active trading platform users",
+    "Successfully upgraded legacy Angular projects, reducing technical debt",
+    "Consistently contributed to better UX and higher user engagement"
+  ],
+  "education": [
+    {
+      "title": "Master Degree in Computer Science",
+      "institution": "Donbas State Mechanical Engineering Academy, Kramatorsk",
+      "period": "2005 - 2010"
+    }
+  ]
+}
