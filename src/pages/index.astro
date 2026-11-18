@@ -22,7 +22,7 @@ import homeData from '../content/pages/home.json';
       <p>&nbsp;</p>
       <p>{homeData.greeting}</p><br/>
       <p>
-        I'm a Software Developer with <ExperienceYears client:load startYear={homeData.startYear} /> years of experience specializing in Angular and Ionic,
+        I'm a Software Developer with <ExperienceYears startYear={homeData.startYear} /> years of experience specializing in Angular and Ionic,
         delivering scalable, high-performance web and mobile applications.
       </p><br/>
       {homeData.paragraphs && homeData.paragraphs.slice(1).map((para) => (

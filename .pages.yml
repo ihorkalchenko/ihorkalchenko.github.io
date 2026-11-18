@@ -32,9 +32,17 @@ content:
         type: number
         default: 2019
         required: true
-      - name: intro
-        label: Introduction Paragraphs
-        type: rich-text
+      - name: greeting
+        label: Greeting
+        type: string
+      - name: paragraphs
+        label: Paragraphs
+        type: string
+        list: true
+      - name: highlights
+        label: Highlights
+        type: string
+        list: true
 
   - name: resume
     label: Resume / About
