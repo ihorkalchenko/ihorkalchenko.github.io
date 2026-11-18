@@ -1,5 +1,6 @@
 ---
 import { ThemeToggle } from '../components/ThemeToggle';
+import { EmailIcon, GithubIcon, LinkedinIcon } from '../components/icons';
 import '../styles/style.scss';
 
 interface Props {
@@ -27,8 +28,6 @@ const currentYear = new Date().getFullYear();
   <meta name="description" content={description} />
   <meta name="author" content="Ihor Kalchenko" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
   <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
   <!-- Google Tag Manager -->
   <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -71,13 +70,13 @@ const currentYear = new Date().getFullYear();
     <footer class="footer">
       <div class="footer-icons">
         <a class="footer-icon" href="mailto:ihorka88@gmail.com" aria-label="Email">
-          <i class="far fa-envelope"></i>
+          <EmailIcon />
         </a>
         <a class="footer-icon" target="_blank" rel="noopener noreferrer" href="https://github.com/ihorkalchenko" aria-label="GitHub">
-          <i class="fab fa-github"></i>
+          <GithubIcon />
         </a>
         <a class="footer-icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ihorkalchenko/" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
+          <LinkedinIcon />
         </a>
       </div>
       <small class="footer-copyright">&copy; {startYear}-{currentYear}, ihor kalchenko</small>

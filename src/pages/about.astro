@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { DownloadIcon } from '../components/icons';
 import resumeData from '../content/pages/resume.json';
 ---
 
@@ -17,7 +18,7 @@ import resumeData from '../content/pages/resume.json';
           target="_blank"
           download
         >
-          <i class="fas fa-download"></i>
+          <DownloadIcon />
           Download as PDF
         </a>
       </section>
