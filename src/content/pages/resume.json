@@ -39,6 +39,8 @@
   "experience": [
     {
       "company": "Protonix",
+      "companyUrl": "",
+      "location": "",
       "period": "2021 - present",
       "role": "Software Developer",
       "stack": "TS, Angular, Angular Material, Ionic, RxJs, NgRx, Chart.js, Vitest, Docker, Git",
@@ -53,6 +55,8 @@
     },
     {
       "company": "Innovecs",
+      "companyUrl": "",
+      "location": "",
       "period": "2019 - 2021",
       "role": "Software Developer",
       "stack": "Angular, Angular Material, HTML, Sass, Bootstrap, PHP, MySQL, Webpack, Docker, Git",
@@ -65,6 +69,8 @@
     },
     {
       "company": "Elyland LLC",
+      "companyUrl": "",
+      "location": "",
       "period": "2017 - 2018",
       "role": "Web / UI Developer",
       "stack": "HTML, Sass, JavaScript, Bootstrap, JSP, Gulp, Git, Photoshop",
@@ -78,7 +84,8 @@
   ],
   "education": [
     {
-      "institution": "Donbas State Mechanical Engineering Academy, Kramatorsk",
+      "institution": "Donbas State Mechanical Engineering Academy",
+      "location": "Kramatorsk",
       "degree": "IT, Bachelor",
       "period": "2005 - 2010"
     }

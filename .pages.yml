@@ -81,6 +81,12 @@ content:
             label: Company Name
             type: string
             required: true
+          - name: companyUrl
+            label: Company URL
+            type: string
+          - name: location
+            label: Company Location
+            type: string
           - name: period
             label: Employment Period
             type: string
@@ -103,6 +109,10 @@ content:
         fields:
           - name: institution
             label: Institution
+            type: string
+            required: true
+          - name: location
+            label: Location
             type: string
             required: true
           - name: degree

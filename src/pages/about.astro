@@ -87,8 +87,8 @@ import resumeData from '../content/pages/resume.json';
           <h2 class="educations-title">Education</h2>
           {resumeData.education.map((edu) => (
             <div class="education">
-              <h3 class="education-title">{edu.title}</h3>
-              <p class="education-location">{edu.institution}</p>
+              <h3 class="education-title">{edu.institution} <span class="education-location"> / {edu.location} /</span></h3>
+              <p class="education-degree">{edu.degree}</p>
               <p class="education-duration">{edu.period}</p>
             </div>
           ))}
