@@ -5,23 +5,35 @@
   "skills": [
     {
       "category": "Frontend",
-      "items": "Angular, TypeScript, RxJS, NgRx, JavaScript (ES6+)"
+      "items": "Angular 20+, Signals, RxJS, NgRx, TypeScript"
     },
     {
-      "category": "UI & Styling",
-      "items": "HTML5, CSS3, Sass, Bootstrap, Angular Material, Ionic Framework"
+      "category": "Backend",
+      "items": "Node.js, NestJS, Drizzle ORM, PostgreSQL, MySQL"
     },
     {
-      "category": "Tools & Build",
-      "items": "Webpack, Docker, Gulp, npm, yarn"
+      "category": "UI",
+      "items": "HTML, CSS, Sass, Storybook, Responsive Design, Ionic, Angular Material, Bootstrap, TailwindCSS, i18n"
+    },
+    {
+      "category": "API Integration",
+      "items": "REST APIs, WebSockets, Postman, Swagger"
+    },
+    {
+      "category": "Tools",
+      "items": "Webpack, ESbuild, Gulp, npm, yarn, Git, Jira, Confluence"
+    },
+    {
+      "category": "AI Tools",
+      "items": "ChatGPT, Claude, Gemini, Antigravity CLI"
     },
     {
       "category": "Testing",
-      "items": "Jasmine, Karma"
+      "items": "Vitest, Jasmine, Karma, Unit Testing, ESLint, Prettier, Exploratory Testing"
     },
     {
-      "category": "Other",
-      "items": "Git/GitHub, Jira, Agile/Scrum, Figma, WordPress, WebStorm/AI Assistance"
+      "category": "DevOps",
+      "items": "CI/CD, Docker"
     }
   ],
   "experience": [
