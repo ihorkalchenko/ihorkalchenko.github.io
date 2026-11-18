@@ -27,46 +27,48 @@
   "experience": [
     {
       "company": "Protonix",
-      "companyUrl": "https://www.protonixltd.com",
-      "location": "Kyiv",
       "period": "2021 - present",
       "role": "Software Developer",
+      "stack": "TS, Angular, Angular Material, Ionic, RxJs, NgRx, Chart.js, Vitest, Docker, Git",
       "responsibilities": [
-        "Developed core trading platform features including copy trading, market calendar, market analysis, and real-time chat integrations",
-        "Improved user engagement and usability by implementing intuitive, client-focused UI solutions",
-        "Upgraded Angular and dependencies across multiple projects, reducing technical debt and improving application stability",
-        "Collaborated closely with clients and cross-functional teams to define requirements and deliver scalable frontend solutions",
-        "Contributed to full-stack development with strong focus on frontend architecture and performance"
-      ],
-      "stack": "Angular (TS/RxJs/NgRx), Angular Material, Ionic, Chart.js, Jasmine, Jest, Webpack, Docker, Git"
+        "Architected scalable, modular frontend solutions for complex enterprise applications serving over 100k active users using Angular 20+, TypeScript, RxJS, NgRx, and Angular Material.",
+        "Optimized data-heavy views using lazy loading, caching, and efficient data binding to modernize legacy UI layers.",
+        "Engineered a real-time chat system with WebSockets, utilizing virtual scrolling and debouncing for seamless streaming.",
+        "Partnered with cross-functional teams to design and integrate secure, efficient features.",
+        "Enforced code quality and maintainability across the team by leading structured code reviews and writing tests.",
+        "Increased feature delivery speed by up to 30% using AI-assisted development practices."
+      ]
     },
     {
       "company": "Innovecs",
-      "companyUrl": "https://innovecs.com",
-      "location": "Kyiv",
       "period": "2019 - 2021",
       "role": "Software Developer",
+      "stack": "Angular, Angular Material, HTML, Sass, Bootstrap, PHP, MySQL, Webpack, Docker, Git",
       "responsibilities": [
-        "Rebuilt and enhanced a deposit widget, improving functionality and maintainability",
-        "Developed client websites with optimized performance, reducing load times and improving conversion rates",
-        "Worked in cross-functional teams to deliver projects on time and within budget",
-        "Applied best practices in accessibility, responsiveness, and modern UI/UX design"
-      ],
-      "stack": "Angular, Angular Material, HTML, Sass, Bootstrap, PHP, MySQL, Webpack, Docker, Git"
+        "Rebuilt a complex deposit widget to enhance maintainability and code quality, achieving ~20% code reduction by removing legacy codebase.",
+        "Delivered high-performance client websites, driving measurable improvements in load times, cross-browser compatibility, and conversion rates.",
+        "Partnered with UX/UI designers and backend engineers to seamlessly deliver production-ready features.",
+        "Mentored two developers, fostering technical growth and best practices within the team."
+      ]
     },
     {
       "company": "Elyland LLC",
-      "companyUrl": "https://elyland.net/",
-      "location": "Kyiv",
       "period": "2017 - 2018",
       "role": "Web / UI Developer",
+      "stack": "HTML, Sass, JavaScript, Bootstrap, JSP, Gulp, Git, Photoshop",
       "responsibilities": [
         "Developed and maintained promotional websites for gaming products",
         "Built UI components for a social application",
         "Improved website performance (PageSpeed score from ~50 to 86%)",
         "Delivered responsive and visually engaging user interfaces"
-      ],
-      "stack": "HTML, Sass, JavaScript, Bootstrap, JSP, Gulp, Git, Photoshop"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Donbas State Mechanical Engineering Academy, Kramatorsk",
+      "degree": "IT, Bachelor",
+      "period": "2005 - 2010"
     }
   ],
   "achievements": [
@@ -74,12 +76,5 @@
     "Delivered high-impact fintech features used by active trading platform users",
     "Successfully upgraded legacy Angular projects, reducing technical debt",
     "Consistently contributed to better UX and higher user engagement"
-  ],
-  "education": [
-    {
-      "title": "Master Degree in Computer Science",
-      "institution": "Donbas State Mechanical Engineering Academy, Kramatorsk",
-      "period": "2005 - 2010"
-    }
   ]
 }
