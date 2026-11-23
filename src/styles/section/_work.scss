@@ -8,56 +8,128 @@
     }
 }
 
-.work-item {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid $color-grey-300;
-}
+.work-item--glass {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0,0,0, 0.06);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s ease;
 
-.work-pic {
+  body.dark-theme & {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  &:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+
+    .work-pic {
+      transform: scale(1.06);
+      filter: brightness(0.95);
+    }
+
+    .work-quick-badge {
+      transform: scale(1.1) rotate(45deg);
+      background-color: #fff;
+      color: #000;
+    }
+
+    .work-glass-dock {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(0);
+
+      body.dark-theme & {
+        background: rgba(30, 30, 30, 0.85);
+      }
+    }
+  }
+
+  .work-glass-link {
     display: block;
-    max-width: 100%;
-    height: auto;
-}
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+  }
 
-.work-caption {
+  .work-backdrop {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+  }
+
+  .work-pic {
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.3s ease;
+  }
+
+  .work-vignette {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.65) 100%);
+  }
+
+  .work-quick-badge {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    color: #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    background-color: $color-grey-800;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    transition: visibilty .3s ease-out, opacity .3s ease-out;
-    
-    .work-item:hover & {
-        visibility: visible;
-        opacity: 1;
-        z-index: initial;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    z-index: 2;
+  }
+
+  .work-glass-dock {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    right: 1.2rem;
+    padding: 1.6rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+
+    body.dark-theme & {
+      background: rgba(25, 25, 25, 0.75);
+      border-color: rgba(255, 255, 255, 0.1);
     }
-}
+  }
 
-.work-title {
+  .work-dock-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .work-title {
     font-family: $font-secondary;
+    font-size: 1.8rem;
     font-weight: 600;
-}
+    margin: 0;
+    color: var(--primary-color);
+  }
 
-.work-mark {
-    font-size: 1.4rem;
-    margin-bottom: 2.5rem;
-}
-
-.work-link {
-    display: inline-block;
-    padding: .5rem 3rem;
-    color: $color-grey-800;
-    background-color: $color-grey-100;
+  .work-tech-inline {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    opacity: 0.75;
+    margin: 0;
+    letter-spacing: 0.4px;
+  }
 }
