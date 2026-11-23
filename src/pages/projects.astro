@@ -16,14 +16,31 @@ const sortedProjects = allProjects.sort((a, b) => (a.data.order ?? 0) - (b.data.
       <section class="work">
         <ul class="work-list">
           {sortedProjects.map((project) => (
-            <li class="work-item">
-              <img class="work-pic" src={project.data.thumbnail} alt={project.data.alt || project.data.title} />
-              <div class="work-caption">
-                <h3 class="work-title">{project.data.title}</h3>
-                <p class="work-mark">{project.data.stack}</p>
-                <a class="work-link" href={project.data.link} target="_blank" rel="noopener noreferrer">View project</a>
-              </div>
-            </li>
+              <li class="work-item work-item--glass">
+                <a class="work-glass-link" href={project.data.link} target="_blank" rel="noopener noreferrer">
+                  <div class="work-backdrop">
+                    <img
+                        class="work-pic"
+                        src={project.data.thumbnail}
+                        alt={project.data.alt || project.data.title}
+                        loading="lazy"
+                    />
+                    <div class="work-vignette"></div>
+                    <div class="work-quick-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="work-glass-dock">
+                    <div class="work-dock-inner">
+                      <h3 class="work-title">{project.data.title}</h3>
+                      <p class="work-tech-inline">{project.data.stack}</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
           ))}
         </ul>
       </section>
