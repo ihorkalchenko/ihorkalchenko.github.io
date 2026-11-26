@@ -1,31 +1,109 @@
-.nav-list {
+.nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-kinetic {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2.8rem;
 
     @include respond-to('medium') {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+        margin: 0 auto;
+        width: 140px;
     }
-}
 
-.nav-item {
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-    @include respond-to('medium') {
-        padding: .75rem 0;
+    .nav-item {
+        padding: 0;
     }
-}
 
-.nav-link {
-    color: var(--nav-color);
-    position: relative;
-    display: inline-block;
-    outline: none;
-    letter-spacing: .1rem;
+    .nav-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.6rem 0.2rem;
+        color: var(--nav-color);
+        text-decoration: none;
+        opacity: 0.65;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.12rem;
+        outline: none;
+        transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 
-    &.active {
-        text-decoration: underline;
+        .nav-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            border-radius: 2px;
+            opacity: 0;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+            transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+
+            @include respond-to('medium') {
+                top: 50%;
+                bottom: auto;
+                left: -14px;
+                width: 4px;
+                height: 0;
+                transform: translateY(-50%);
+                border-radius: 20px;
+                transition: height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+
+            @include respond-to('medium') {
+                transform: translateX(4px);
+            }
+
+            &::after {
+                opacity: 0.5;
+                width: 40%;
+
+                @include respond-to('medium') {
+                    width: 4px;
+                    height: 12px;
+                }
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px dashed var(--primary-color);
+            outline-offset: 4px;
+        }
+
+        &.active {
+            opacity: 1;
+            font-weight: 700;
+
+            &::after {
+                opacity: 1;
+                width: 100%;
+
+                @include respond-to('medium') {
+                    width: 4px;
+                    height: 20px;
+                }
+            }
+        }
     }
 }
 
