@@ -54,11 +54,35 @@ const currentYear = new Date().getFullYear();
         </svg>
       </a>
 
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a class:list={["nav-link", { active: activeNav === 'home' }]} href="/">home</a></li>
-          <li class="nav-item"><a class:list={["nav-link", { active: activeNav === 'projects' }]} href="/projects">projects</a></li>
-          <li class="nav-item"><a class:list={["nav-link", { active: activeNav === 'resume' }]} href="/about">resume</a></li>
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="nav-list nav-kinetic">
+          <li class="nav-item">
+            <a
+                class:list={["nav-link", { active: activeNav === 'home' }]}
+                href="/"
+                aria-current={activeNav === 'home' ? 'page' : undefined}
+            >
+              <span class="nav-text">home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+                class:list={["nav-link", { active: activeNav === 'projects' }]}
+                href="/projects"
+                aria-current={activeNav === 'projects' ? 'page' : undefined}
+            >
+              <span class="nav-text">projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+                class:list={["nav-link", { active: activeNav === 'resume' }]}
+                href="/about"
+                aria-current={activeNav === 'resume' ? 'page' : undefined}
+            >
+              <span class="nav-text">resume</span>
+            </a>
+          </li>
         </ul>
       </nav>
 
